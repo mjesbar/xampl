@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import time
 
-#-----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 #   In this xample we will train
 #
 #       ·connect to the mongodb server.
@@ -10,7 +10,7 @@ import time
 #       ·insert a sample document.
 #       ·query all the documents n the training database and python collection.
 #       ·close the connection to the server.
-#-----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 
 user = 'kali'
 passwd = 'niggue'
@@ -32,7 +32,7 @@ local = connection.local
 
 # select the 'marks' collection
 
-#marks_collection = db.marks
+# marks_collection = db.marks
 
 
 # query all the documents

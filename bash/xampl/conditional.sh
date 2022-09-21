@@ -10,9 +10,9 @@ if (( $count < 10 ))
 # this statement could be evaluated with other brackets [ ] conditional-statement like:
 # -eq	equal to,
 # -gt	greater than,
-# -gte	greater and equal to,
+# -ge	greater and equal to,
 # -lt	less than,
-# -lte	less and equal to,
+# -le	less and equal to,
 then
 	echo "the count variable is less than 10"
 elif (( $count > 10 ))
