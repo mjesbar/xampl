@@ -136,5 +136,27 @@ CREATE TABLE IF NOT EXISTS `Prestamos`(
 
 );
 
+-- creamos la table donde se llevan los registros de pago
+
+CREATE TABLE IF NOT EXISTS `Libro de Pagos`(
+
+	-- creamos las columnas
+	`pagoID`			INT(12) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+	`prestamo`			INT(10) UNSIGNED ZEROFILL NOT NULL,
+	`monto pago`		FLOAT UNSIGNED NOT NULL,
+	`fecha pago`		DATE,
+	`cliente`			INT(8) UNSIGNED ZEROFILL NOT NULL,
+	`saldo`				FLOAT UNSIGNED NOT NULL,
+	`cuotas restantes`	INT UNSIGNED NOT NULL,
+
+
+	-- creamos la clave primaria y las claves externas
+	PRIMARY KEY (`pagoID`)
+
+	FOREIGN KEY (`prestamo`) REFERENCES `Prestamos`(`prestamoID`),
+	FOREIGN KEY (`cliente`) REFERENCES `Clientes`(`clienteID`)
+
+);
+
 
 

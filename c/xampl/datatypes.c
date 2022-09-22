@@ -2,6 +2,9 @@
 #include<limits.h>	/* this contains the limits of the whole variables types */
 #include<stdint.h>
 #include<stdbool.h>
+#include<stderr.h>
+#include<stdout.h>
+
 
 /*	this is the definitions of the several options that we have to
  *	define our variables in any cases of use. 
@@ -60,6 +63,7 @@ double sn = 1.23e3;	/* decimal fraction 1.23 is scaled by 10^3, that is 1230.0 *
 
 char* str = "hello world";	/* string literal */
 
+
 char a1[] = "abc";	/* a1 is a char[4] holding {'a','b','c','\0'} */
 char a2[4] = "abc";	/* same as a1 */
 char a3[3] = "abc";	/* a3 is a char[3] holding {'a','b','c'}, missin the '\0' */
@@ -79,9 +83,13 @@ int main(void)	{
 
 
 int newLine(int n)	{
+
 	new = n;
 	return new;
+
 }
+
+
 
 
 
