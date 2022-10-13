@@ -74,6 +74,8 @@ char* s = "foobar";
 char const* s1 = "foobar";
 //s1[0] = 'F';	/* compiler error */
 
+char emm = 'B';
+
 char* ct = "Hello" ", " "World";	/* since c99, more than two wide-strings can be contatenated */
 
 int main(void)	{
