@@ -1,5 +1,8 @@
 import os
+
 import numpy
+
+HOLA = 25
 
 
 # most common types
