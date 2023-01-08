@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # ====================================================================================================================================================== 
 # We can do math operation by using double parenthesis "(( [operation] ))", so we need to 
@@ -6,10 +6,10 @@
 # a "math space" to make arithmetical or algebraical operations.
 # ======================================================================================================================================================  
 
-
-num1=4			# declariing one numeric variable called num1 and assigning 4 to the variable
-num2=25			# declaring one numeric variable called num2 and assigning 25 to store
-
+#echo "gimme the number 1"
+read -p "Enter num1: " num1			# declariing one numeric variable called num1 and assigning 4 to the variable
+#echo "gimme the number 2"
+read -p "Enter num2: " num2		# declaring one numeric variable called num2 and assigning 25 to store
 
 echo $(( num1 + num2 ))		# printing the sum of both variables
 echo $(( num1 - num2 ))
@@ -29,5 +29,4 @@ read Hex
 echo -n "the decimal value of $Hex is : "
 
 echo "obase=10; ibase=16; $Hex" | bc
-
 

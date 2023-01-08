@@ -1,9 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
 
 count=16
-age=16
-
+age=19
 
 if (( $count < 10 ))
 
