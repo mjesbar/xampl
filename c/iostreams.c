@@ -44,7 +44,7 @@ int main(int argc, char *argv[])	{
 						   also fscanf, fread, fgets, fgetc are other ways to read the file. */
 		fpos_t pos;
 		fgetpos(file, &pos);
-		printf("%d", pos);
+        //printf("%d", pos);
 	}
 
 	// close the file
