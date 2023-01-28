@@ -27,6 +27,12 @@ def textInput(request):
     return render(request, 'textInput.html')
 
 def counter(request):
-    text : str = request.GET['text']
+    text = request.POST['text']
+    #text = request.GET['text'] # Also available,, set method="GET" at form html tag.
     words : int = len(text.split())
     return render(request, 'counter.html', {'words': words})
+
+
+
+def staticPage(request):
+    return render(request, 'staticPage.html')
