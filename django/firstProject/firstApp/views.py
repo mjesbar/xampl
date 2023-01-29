@@ -4,7 +4,7 @@ from django.template import context
 
 # Create your views here
 def app(request):
-    return HttpResponse('<h2>Aye!, your firstProject Helloworld in Django!!!</h2>')
+    return HttpResponse(b'<h2>Aye!, your firstProject Helloworld in Django!!!</h2>')
 
 
 
@@ -36,3 +36,11 @@ def counter(request):
 
 def staticPage(request):
     return render(request, 'staticPage.html')
+
+
+
+def simpleLogin(request):
+    return render(request, 'simpleLogin.html')
+
+
+
