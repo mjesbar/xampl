@@ -1,0 +1,8 @@
+{% load static %}
+
+<h2>Select an Option to redirect ...</h2>
+{% for option in options %}
+<h3>options:
+<a href="{% url 'postOption' option %}">{{option}}</a>
+</h3>
+{% endfor %}
