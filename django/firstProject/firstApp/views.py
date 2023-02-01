@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import QueryDict
+from django.http import HttpRequest
 from django.template import context
+import json
+
 
 # Create your views here
 def app(request):
@@ -25,7 +29,6 @@ def dynamicValue(request):
 
 def textInput(request):
     return render(request, 'textInput.html')
-
 def counter(request):
     text = request.POST['text']
     #text = request.GET['text'] # Also available,, set method="GET" at form html tag.
@@ -41,6 +44,22 @@ def staticPage(request):
 
 def simpleLogin(request):
     return render(request, 'simpleLogin.html')
+def logged(request):
+    content = request.META
+    query = request.POST.copy()
+    query = query.dict()
+    return render(request, 'logged.html', {'content': content['USER'], 'query': query})
 
+
+
+def post(request):
+    options = ['profile_one', 'profile_two', 'profile_three']
+    context = {
+        'options': options
+    }
+    return render(request, 'post.html', context)
+def postOption(request, pk):
+    context = {'dynamic_profile_option': pk}
+    return render(request, 'postOption.html', context)
 
 
