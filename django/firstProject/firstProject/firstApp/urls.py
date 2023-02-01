@@ -5,7 +5,7 @@ from . import views
 
 # this array contain the url tree to navigate through the app.
 urlpatterns = [
-    path('index/', views.index, name='index'),
+    path('', views.index, name='index'),
     # basic app
     path('app/', views.app, name='app'),
     # inserting value with from python varibales
