@@ -18,8 +18,6 @@ with DAG(
         schedule_interval='@daily'
 ) as dag:
     
-
-
     task1 = BashOperator(
             task_id='first_task',
             bash_command="printf \"this is the first command on the task!\"",

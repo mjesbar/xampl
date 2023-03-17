@@ -14,7 +14,7 @@ int main(int argc, char *argv[])	{
 	FILE *file = fopen("edited.txt", "w+");
 	
 	// print an error if the file opening was failed
-	if (file==NULL)	{
+	if (file == NULL)	{
 		perror("file not opened");
 		return EXIT_FAILURE;
 	}

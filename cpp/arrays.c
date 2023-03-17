@@ -3,6 +3,7 @@
 
 #define ARR_LEN 1000
 
+
 int main(void)	{
 
 	int array[10];		/* declaring an empty array with space to 10 integers */

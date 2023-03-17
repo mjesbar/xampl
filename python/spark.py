@@ -31,6 +31,18 @@ df = spark.read.json("file:///home/debian/mega/github/xampl/python/test.json",
                      multiLine=True,
                      encoding="utf-8")
 
+class Test:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        return "Test(name=%r, age=%r)" % (self.name, self.age)
+
+
+print(f"{a}\n")
+
+a = Test(name, age)
 print("Schema:")
 df.printSchema()
 
