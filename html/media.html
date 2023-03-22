@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>mjesbar.media.com</title>
+	</head>
+
+	<body>
+		<!-- <audio> Defines sound, such as music or other audio streams -->
+		<!-- <source> Defines multiple media resources for media elements (<video> and <audio>) -->
+		<h1>A simple audio tag</h1>
+		<audio src="res/sound0.wav" controls autoplay loop muted>
+			<source src="res/sound1.wav" type="audio/wav">
+		</audio>
+
+		<!-- <track> Defines text tracks for media elements (<video> and <audio>) -->
+		<track src="res/sound1.wav" kind="captions" srclang="en" label="English">
+
+		<!-- <video> Defines a video or movie -->
+		<h1>A simple video tag</h1>
+		<video width="20%" height="20%" autoplay muted loop>
+			<source src="res/video0.mp4" type="video/mp4">
+		</video>
+
+	</body>
+
+</html>
