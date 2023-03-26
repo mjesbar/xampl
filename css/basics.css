@@ -229,3 +229,93 @@ div.align {
 	background: green;
 
 }
+
+/* Forms */
+input[type=text] {
+	font-family: 'MesloLGS NFM'; font-size: 18px;
+	display: inline-block;
+	width: 400px; height: 20px;
+	padding: 10px;	margin: 5px; border: 1px solid #ccc; border-radius: 10px;
+	background-color: #FFFFFF;
+}
+form {
+	background-color: #505050;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/* Border Radius */
+img[alt="image0"] {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 25px; border: 2px dashed #d70a42; margin: 5px; padding: 2px;
+}
+
+/* Gradient */
+div.gradient {
+	vertical-align: top;
+	display: inline-block; width: 200px; height: 100px;
+	border-radius: 25px; border: 2px dashed #d70a42; margin: 5px; padding: 2px;
+	background: linear-gradient(30deg, #d70a42, #d70aba);
+}
+
+/* Shadows */
+div.shadow {
+	vertical-align: top;
+	text-align: center;
+	line-height: 100px;
+	display: inline-block; width: 200px; height: 100px;
+	border-radius: 25px; border: 2px dashed #d70a42; margin: 5px; padding: 2px;
+	background: #d70a42;
+	box-shadow: 20px 20px 0px 10px #8f8f8f;
+}
+
+/* Transitions */
+div.transition {
+	vertical-align: top;
+	display: inline-block; width: 200px; height: 100px;
+	border-radius: 25px; border: 2px dashed #d70a42; margin: 5px; padding: 2px;
+	background: #d70a42;
+	transition: width 0.25s, height 0.25s, background-color 0.25s;
+}
+div.transition:hover {
+	width: 375px; height: 225px; background-color: #000000;
+}
+
+/* Animations */
+div.animation {
+	vertical-align: top;
+	display: inline-block; width: 200px; height: 100px;
+	border-radius: 25px; border: 2px dashed #d70a42; margin: 5px; padding: 2px;
+	background: #d70a42;
+	animation: mymove 2s infinite;
+}
+@keyframes mymove {
+	/* from {background-color: #xxxxxx} */
+	0% {background-color: #d70a42;}
+	25% {background-color: #e0b3b3;}
+	50% {background-color: #d70a42;}
+	75% {background-color: #e0b3b3;}
+	100% {background-color: #d70a42;}
+	/* to {background-color: #xxxxxx} */
+}
+
+/* Buttons */ 
+button {
+	display: inline-block; width: 200px; height: 100px;
+	margin: 5px; border: none; padding: 5px; border-radius: 5px;
+	background-color: blueviolet;
+
+}
+button:hover {
+	background-color: greenyellow;
+}
+
+/* Media Queries */ 
+@media screen and (min-width: 600px) {
+	body {
+		background-color: #e0e0e0;
+	}
+}
+
+
