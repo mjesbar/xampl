@@ -3,6 +3,7 @@
  */ 
 
 
+
 // Objects
 // Creating an object
 const objectx = {}; // creates an empty object
@@ -14,8 +15,29 @@ const object3 = {
 	2: 'value3',
 	propertyN: 'valueN'
 }
+Object.prototype.universalKey = 'Universal Value';
 object3.propertyAdded = 'new value';
-console.log("Object: ",object3);
+// accessing an object
+object3.property1; // returns 'value1'
+object3["property2"]; // returns 'value2'
+object3[2]; // returns 'value3'
+// methods inside Objects
+const myObj = {
+	"key": "value",
+	myMethod: function (x, y)
+	{
+		return x + y 
+		//do something.
+	},
+	myGetMethod()
+	{
+		return this.key
+		//do something.
+	}
+}
+console.log("Object:",object3, "Universal key/value:", object3.universalKey);
+console.log("Object Method Result: myMethod(1, 1) ->", myObj.myMethod(1, 1));
+console.log(`Object Method Result: myGetMethod() -> ${myObj.myGetMethod()}`);
 
 
 // Arrays
