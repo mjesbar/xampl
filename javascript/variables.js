@@ -17,7 +17,7 @@ let unknown;
 // Symbol
 let symbol = Symbol('box');
 // Array
-let array = ['Book', 'Pen', 'Pencil'];
+let arraySample = ['Book', 'Pen', 'Pencil'];
 // Object
 let object = document.querySelector('h1');
 
@@ -27,7 +27,7 @@ console.log(boolean);
 console.log(nullvar);
 console.log(unknown);
 console.log(symbol);
-console.log(array);
+console.log(arraySample);
 console.log(object);
 
 // object selector

@@ -49,6 +49,5 @@ do {/* code */} while (condition);
 // function statement
 function functionName(/* parameters */) {/* code; [return value] */}
 // or
-const functionName = function(/* parameters */) {/* code; [return value]  */}
-
+const functionName = function (/* parameters */) {/* code; [return value]  */};
 
