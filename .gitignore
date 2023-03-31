@@ -1,3 +1,9 @@
 
 cheatsheets/
 aws/lambda/basic_function/layer/
+fullstack/django/include
+fullstack/django/bin
+fullstack/django/lib
+fullstack/django/lib64
+fullstack/django/pyvenv.cfg
+fullstack/django/share
