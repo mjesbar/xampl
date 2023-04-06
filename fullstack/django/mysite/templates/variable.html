@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<!--
+	this Jinja statement appends the content of variable.html to extend.html, at the block content
+	scope of extend.html
+-->
+{% extends 'extend.html' %}
+
+{% block content %}
+
+<!-- printing a simple variable -->
+<div>
+	<h3>{{ data }}</h3>
+</div>
+<!-- looping through datalist -->
+{% for i in datas %}
+<div>
+	<h3>{{ i }}</h3>
+</div>
+{% endfor %}
+<hr>
+
+{% endblock content %}

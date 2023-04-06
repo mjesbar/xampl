@@ -1,9 +1,0 @@
-{% load static %}
-
-<h1>Provide a text to count </h1>
-
-<form method="POST" action="counter">
-    <textarea name="text" rows="30" cols="30"></textarea>
-    <br><input type="submit"/>
-    {% csrf_token %}    <!-- this line is inserted due to POST beahavior, instead when use GET method this line may be omitted. -->
-</form>
