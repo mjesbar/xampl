@@ -9,4 +9,5 @@ urlpatterns = [
     path("variable/", views.variable, name="variable"),
     path("extend/", views.extend, name="extend"),
     path("view/<int:question_id>/", views.view, name="view"),
+    path("static/", views.static, name="static")
 ]

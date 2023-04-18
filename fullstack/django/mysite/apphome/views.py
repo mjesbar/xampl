@@ -61,7 +61,9 @@ def view(request, question_id):
         #  return render(request, "apphome/view.html", context)
         return HttpResponseRedirect("/apphome/room/")
 
-
+def static(request):
+    """Return a static linked page."""
+    return render(request, 'apphome/static.html')
 
     
 
