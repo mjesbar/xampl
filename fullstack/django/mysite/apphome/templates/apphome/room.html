@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,7 +8,7 @@
 	<body>
 		{% include 'apphome/home.html' %}
 		<h2>Welcome to the home room at host/room URL.</h2>
-		<img src="ttps://i.ytimg.com/vi/HQfC7IFiQxA/maxresdefault.jpg" alt="Room" width="480" height="360">
+		<img src="{% static 'apphome/assets/debian_wallpaper.jpg' %}" alt="DebianWallpaper" width="620" height="360">
 	</body>
 </html>
 

@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Question(models.Model):
     """Question Model."""
     question_text = models.CharField(max_length=200)
@@ -23,8 +22,5 @@ class Choice(models.Model):
     def __str__(self): 
         return self.choice_text
     #Choice end
-
-
-
 
 

@@ -7,17 +7,18 @@ from django.urls import reverse
 
 from .models import Question, Choice
 
-
 # Create your views here.
 
 def home(request):
     """Return the homepage."""
     return render(request, 'apphome/home.html')
+#endef
 
 
 def room(request):
     """Return the room page."""
     return render(request, 'apphome/room.html')
+#endef
 
 
 def variable(request):
@@ -27,6 +28,7 @@ def variable(request):
     context = {'data': request_headers, 'datas': varn}
 
     return render(request, 'apphome/variable.html', context)
+#endef
 
 
 def extend(request):
@@ -34,6 +36,7 @@ def extend(request):
     template = loader.get_template("apphome/extend.html")
 
     return HttpResponse(template.render(request=request))
+#endef
 
 
 def view(request, question_id):
@@ -60,11 +63,12 @@ def view(request, question_id):
         }
         #  return render(request, "apphome/view.html", context)
         return HttpResponseRedirect("/apphome/room/")
+#endef
+
 
 def static(request):
     """Return a static linked page."""
     return render(request, 'apphome/static.html')
-
-    
+#endef
 
 

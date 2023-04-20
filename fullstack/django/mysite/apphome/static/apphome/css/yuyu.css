@@ -1,0 +1,13 @@
+
+/*
+ * This styelsheet specify the tags appareance for the static.html template around the mysite training
+ * django project
+*/
+
+h1
+{
+	background-color: black;
+	color: white;
+}
+
+

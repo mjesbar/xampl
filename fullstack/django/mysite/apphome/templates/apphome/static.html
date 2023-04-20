@@ -1,8 +1,19 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'apphome/style.css' %}">
+<!DOCTYPE html>
 
-<body>
-	<h1>Hi this is a page that is loading resources from static files.</h1>
-</body>
+<html>
+
+	<head>
+		<title>Loading Statics</title>
+		<link rel="stylesheet" href="{% static 'apphome/css/yuyu.css' %}">
+	</head>
+
+	<body>
+		<h1>Hi this is a page that is loading resources from static files.</h1>
+		<img src="{% static 'apphome/assets/debian_wallpaper.jpg' %}" alt="DebianWallpaper" width="192" height="108">
+	</body>
+
+</html>
+
 
