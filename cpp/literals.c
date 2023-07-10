@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(void)	{
 
+int main(void)
+{
 	// integer literals	
 	int d = 5;		/* decimal suffix */
 	int e = 05;		/* octal suffix */
@@ -14,8 +15,7 @@ int main(void)	{
 	// floating point
 	double f = 3.1416e-10;		/* exponential shifting */
 	float g = 3.1415f;			/* float suffix */
-	long double = 3.14156l;		/* long double suffix */
-
+	long double lodo = 3.14156l;		/* long double suffix */
 
 	// strings literals
 	char h = 'b';			/* simple char */
@@ -23,6 +23,4 @@ int main(void)	{
 	char j = u8"UTF-8";		/* UTF-8 character set */
 	char16_t k = u"UTF-16";
 	char32_t l = U"UTF-32";
-
-	
 }

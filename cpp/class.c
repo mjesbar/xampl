@@ -6,8 +6,8 @@
 float area(float r);
 
 // defining struct class
-typedef struct {
-
+typedef struct
+{
 	float radio;
 	float (*area)(float);
 	// area = area; / we cannot assign the area function address to the area pointer due to struct in C
@@ -17,8 +17,8 @@ typedef struct {
 // Class constructor
 // we can also declare this constructor as a pointer '*BallClass()' and keep in mind that we'll need to
 // use '->' operator to access to members
-Ball BallClass(float build_radio) {
-
+Ball BallClass(float build_radio)
+{
     Ball instance;
     // or 'instance,a   bol also works
 	instance.area = &area;  // now area function pointer is 'pointing' to the area external function
@@ -28,14 +28,15 @@ Ball BallClass(float build_radio) {
 }
 
 // function definitions
-float area(float r)	{
+float area(float r)
+{
 	return r * r;
 }
 
 
 // main execution scope
-int main(void)	{
-    
+int main(void)
+{    
 	Ball ball_object = BallClass(0);
     Ball ball_copy = BallClass(0);
 	ball_object.radio = 10.4567;
