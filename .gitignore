@@ -7,3 +7,5 @@ fullstack/django/lib
 fullstack/django/lib64
 fullstack/django/pyvenv.cfg
 fullstack/django/share
+obj/
+bin/
