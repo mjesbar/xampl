@@ -1,8 +1,6 @@
 ﻿
-using System;
-using System.Net;
 using System.Net.Http;
-
+using Newtonsoft.Json;
 
 
 public class Vector2D
