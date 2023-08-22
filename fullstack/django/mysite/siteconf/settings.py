@@ -82,8 +82,8 @@ DATABASES = {
         #  'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysitedb',
-        'USER': 'debian',
-        'PASSWORD': 'debian',
+        'USER': 'root',
+        'PASSWORD': 'mjesbar',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
