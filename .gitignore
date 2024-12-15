@@ -9,3 +9,4 @@ fullstack/django/pyvenv.cfg
 fullstack/django/share
 obj/
 bin/
+.venv/
