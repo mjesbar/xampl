@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+
+service MessageEcho {
+  // Methods
+
+  rpc ServerEcho(ClientResponse) returns (ServerResponse) {}
+
+  rpc ServerEchoStream(ClientResponse) returns (stream ServerResponse) {}
+
+  rpc ServerEchoFromClientStream(stream ClientResponse) returns (ServerResponse) {}
+
+  rpc ServerEchoStreamFromStreamClientStream(stream ClientResponse) returns (stream ServerResponse) {}
+}
+
+
+message ClientResponse {
+  string message = 1;
+}
+
+
+message ServerResponse {
+  string message = 1;
+}
