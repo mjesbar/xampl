@@ -4,17 +4,17 @@ syntax = "proto3";
 service MessageEcho {
   // Methods
 
-  rpc ServerEcho(ClientResponse) returns (ServerResponse) {}
+  rpc ServerEcho(ClientRequest) returns (ServerResponse) {}
 
-  rpc ServerEchoStream(ClientResponse) returns (stream ServerResponse) {}
+  rpc ServerEchoStream(ClientRequest) returns (stream ServerResponse) {}
 
-  rpc ServerEchoFromClientStream(stream ClientResponse) returns (ServerResponse) {}
+  rpc ServerEchoClientStream(stream ClientRequest) returns (ServerResponse) {}
 
-  rpc ServerEchoStreamFromStreamClientStream(stream ClientResponse) returns (stream ServerResponse) {}
+  rpc ServerEchoStreamClientStream(stream ClientRequest) returns (stream ServerResponse) {}
 }
 
 
-message ClientResponse {
+message ClientRequest {
   string message = 1;
 }
 

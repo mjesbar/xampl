@@ -37,22 +37,22 @@ class MessageEchoStub(object):
         """
         self.ServerEcho = channel.unary_unary(
                 '/MessageEcho/ServerEcho',
-                request_serializer=grpc__pb2.ClientResponse.SerializeToString,
+                request_serializer=grpc__pb2.ClientRequest.SerializeToString,
                 response_deserializer=grpc__pb2.ServerResponse.FromString,
                 _registered_method=True)
         self.ServerEchoStream = channel.unary_stream(
                 '/MessageEcho/ServerEchoStream',
-                request_serializer=grpc__pb2.ClientResponse.SerializeToString,
+                request_serializer=grpc__pb2.ClientRequest.SerializeToString,
                 response_deserializer=grpc__pb2.ServerResponse.FromString,
                 _registered_method=True)
-        self.ServerEchoFromClientStream = channel.stream_unary(
-                '/MessageEcho/ServerEchoFromClientStream',
-                request_serializer=grpc__pb2.ClientResponse.SerializeToString,
+        self.ServerEchoClientStream = channel.stream_unary(
+                '/MessageEcho/ServerEchoClientStream',
+                request_serializer=grpc__pb2.ClientRequest.SerializeToString,
                 response_deserializer=grpc__pb2.ServerResponse.FromString,
                 _registered_method=True)
-        self.ServerEchoStreamFromStreamClientStream = channel.stream_stream(
-                '/MessageEcho/ServerEchoStreamFromStreamClientStream',
-                request_serializer=grpc__pb2.ClientResponse.SerializeToString,
+        self.ServerEchoStreamClientStream = channel.stream_stream(
+                '/MessageEcho/ServerEchoStreamClientStream',
+                request_serializer=grpc__pb2.ClientRequest.SerializeToString,
                 response_deserializer=grpc__pb2.ServerResponse.FromString,
                 _registered_method=True)
 
@@ -73,13 +73,13 @@ class MessageEchoServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def ServerEchoFromClientStream(self, request_iterator, context):
+    def ServerEchoClientStream(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def ServerEchoStreamFromStreamClientStream(self, request_iterator, context):
+    def ServerEchoStreamClientStream(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -90,22 +90,22 @@ def add_MessageEchoServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ServerEcho': grpc.unary_unary_rpc_method_handler(
                     servicer.ServerEcho,
-                    request_deserializer=grpc__pb2.ClientResponse.FromString,
+                    request_deserializer=grpc__pb2.ClientRequest.FromString,
                     response_serializer=grpc__pb2.ServerResponse.SerializeToString,
             ),
             'ServerEchoStream': grpc.unary_stream_rpc_method_handler(
                     servicer.ServerEchoStream,
-                    request_deserializer=grpc__pb2.ClientResponse.FromString,
+                    request_deserializer=grpc__pb2.ClientRequest.FromString,
                     response_serializer=grpc__pb2.ServerResponse.SerializeToString,
             ),
-            'ServerEchoFromClientStream': grpc.stream_unary_rpc_method_handler(
-                    servicer.ServerEchoFromClientStream,
-                    request_deserializer=grpc__pb2.ClientResponse.FromString,
+            'ServerEchoClientStream': grpc.stream_unary_rpc_method_handler(
+                    servicer.ServerEchoClientStream,
+                    request_deserializer=grpc__pb2.ClientRequest.FromString,
                     response_serializer=grpc__pb2.ServerResponse.SerializeToString,
             ),
-            'ServerEchoStreamFromStreamClientStream': grpc.stream_stream_rpc_method_handler(
-                    servicer.ServerEchoStreamFromStreamClientStream,
-                    request_deserializer=grpc__pb2.ClientResponse.FromString,
+            'ServerEchoStreamClientStream': grpc.stream_stream_rpc_method_handler(
+                    servicer.ServerEchoStreamClientStream,
+                    request_deserializer=grpc__pb2.ClientRequest.FromString,
                     response_serializer=grpc__pb2.ServerResponse.SerializeToString,
             ),
     }
@@ -135,7 +135,7 @@ class MessageEcho(object):
             request,
             target,
             '/MessageEcho/ServerEcho',
-            grpc__pb2.ClientResponse.SerializeToString,
+            grpc__pb2.ClientRequest.SerializeToString,
             grpc__pb2.ServerResponse.FromString,
             options,
             channel_credentials,
@@ -162,7 +162,7 @@ class MessageEcho(object):
             request,
             target,
             '/MessageEcho/ServerEchoStream',
-            grpc__pb2.ClientResponse.SerializeToString,
+            grpc__pb2.ClientRequest.SerializeToString,
             grpc__pb2.ServerResponse.FromString,
             options,
             channel_credentials,
@@ -175,7 +175,7 @@ class MessageEcho(object):
             _registered_method=True)
 
     @staticmethod
-    def ServerEchoFromClientStream(request_iterator,
+    def ServerEchoClientStream(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -188,8 +188,8 @@ class MessageEcho(object):
         return grpc.experimental.stream_unary(
             request_iterator,
             target,
-            '/MessageEcho/ServerEchoFromClientStream',
-            grpc__pb2.ClientResponse.SerializeToString,
+            '/MessageEcho/ServerEchoClientStream',
+            grpc__pb2.ClientRequest.SerializeToString,
             grpc__pb2.ServerResponse.FromString,
             options,
             channel_credentials,
@@ -202,7 +202,7 @@ class MessageEcho(object):
             _registered_method=True)
 
     @staticmethod
-    def ServerEchoStreamFromStreamClientStream(request_iterator,
+    def ServerEchoStreamClientStream(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -215,8 +215,8 @@ class MessageEcho(object):
         return grpc.experimental.stream_stream(
             request_iterator,
             target,
-            '/MessageEcho/ServerEchoStreamFromStreamClientStream',
-            grpc__pb2.ClientResponse.SerializeToString,
+            '/MessageEcho/ServerEchoStreamClientStream',
+            grpc__pb2.ClientRequest.SerializeToString,
             grpc__pb2.ServerResponse.FromString,
             options,
             channel_credentials,

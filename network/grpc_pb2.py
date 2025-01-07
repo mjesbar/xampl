@@ -24,17 +24,17 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ngrpc.proto\"!\n\x0e\x43lientResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"!\n\x0eServerResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2\x8f\x02\n\x0bMessageEcho\x12\x30\n\nServerEcho\x12\x0f.ClientResponse\x1a\x0f.ServerResponse\"\x00\x12\x38\n\x10ServerEchoStream\x12\x0f.ClientResponse\x1a\x0f.ServerResponse\"\x00\x30\x01\x12\x42\n\x1aServerEchoFromClientStream\x12\x0f.ClientResponse\x1a\x0f.ServerResponse\"\x00(\x01\x12P\n&ServerEchoStreamFromStreamClientStream\x12\x0f.ClientResponse\x1a\x0f.ServerResponse\"\x00(\x01\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ngrpc.proto\" \n\rClientRequest\x12\x0f\n\x07message\x18\x01 \x01(\t\"!\n\x0eServerResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2\xfd\x01\n\x0bMessageEcho\x12/\n\nServerEcho\x12\x0e.ClientRequest\x1a\x0f.ServerResponse\"\x00\x12\x37\n\x10ServerEchoStream\x12\x0e.ClientRequest\x1a\x0f.ServerResponse\"\x00\x30\x01\x12=\n\x16ServerEchoClientStream\x12\x0e.ClientRequest\x1a\x0f.ServerResponse\"\x00(\x01\x12\x45\n\x1cServerEchoStreamClientStream\x12\x0e.ClientRequest\x1a\x0f.ServerResponse\"\x00(\x01\x30\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'grpc_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_CLIENTRESPONSE']._serialized_start=14
-  _globals['_CLIENTRESPONSE']._serialized_end=47
-  _globals['_SERVERRESPONSE']._serialized_start=49
-  _globals['_SERVERRESPONSE']._serialized_end=82
-  _globals['_MESSAGEECHO']._serialized_start=85
-  _globals['_MESSAGEECHO']._serialized_end=356
+  _globals['_CLIENTREQUEST']._serialized_start=14
+  _globals['_CLIENTREQUEST']._serialized_end=46
+  _globals['_SERVERRESPONSE']._serialized_start=48
+  _globals['_SERVERRESPONSE']._serialized_end=81
+  _globals['_MESSAGEECHO']._serialized_start=84
+  _globals['_MESSAGEECHO']._serialized_end=337
 # @@protoc_insertion_point(module_scope)
